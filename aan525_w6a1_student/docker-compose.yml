@@ -1,0 +1,19 @@
+# Build version: main_20260416_Rev1
+name: aan525_w6a1
+services:
+  jupyter:
+    image: uscaan/aan525_w6a1:latest
+    container_name: aan525_w6a1_jupyter
+    ports:
+      - "7777:7777"
+    environment:
+      JUPYTER_ENABLE_LAB: "no"
+      JUPYTER_TOKEN: "usc"
+      COURSE_PREFIX: aan
+      COURSE_NUMBER: 525
+      TASK_NAME: Assignment
+      TASK_NUMBER: w6a1
+    volumes:
+      - type: bind
+        source: ./app
+        target: /app/
